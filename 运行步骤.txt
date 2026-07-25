@@ -3,5 +3,5 @@ netlify ——传网址
 1 cd d:/公/jiaoliuhui/server
 2 npm install
 3 node server.js
-4 打开前端页面 start http://localhost:3000
-5 打开后端页面 start http://localhost:3000/admin
+4 打开前端页面 start https://jiaoliuhui-production.up.railway.app
+5 打开后端页面 start https://jiaoliuhui-production.up.railway.app/admin

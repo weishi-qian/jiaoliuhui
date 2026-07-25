@@ -66,14 +66,14 @@ cd server
 node server.js
 ```
 
-服务启动后显示：`服务器运行在 http://localhost:3000`
+服务启动后显示：`服务器运行在 https://jiaoliuhui-production.up.railway.app`
 
 ### 6. 访问页面
 
 | 页面 | 地址 |
 |------|------|
-| 报名表单 | http://localhost:3000 |
-| 管理后台 | http://localhost:3000/admin |
+| 报名表单 | https://jiaoliuhui-production.up.railway.app |
+| 管理后台 | https://jiaoliuhui-production.up.railway.app/admin |
 
 ## 项目结构
 

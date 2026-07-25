@@ -61,8 +61,8 @@ npm run dev
 ```
 
 服务器启动后：
-- API 地址：`http://localhost:3000/api`
-- 管理后台：`http://localhost:3000/admin`
+- API 地址：`https://jiaoliuhui-production.up.railway.app/api`
+- 管理后台：`https://jiaoliuhui-production.up.railway.app/admin`
 
 ### 4. 访问前端页面
 
