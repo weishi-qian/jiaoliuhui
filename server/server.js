@@ -370,7 +370,7 @@ app.use((err, req, res, next) => {
 });
 
 // 启动服务器
-const port = process.env.PORT || PORT
+const port = process.env.PORT || 3000;
 app.listen(port, "0.0.0.0", () => {
   console.log(`服务器运行在端口:${port}`);
   console.log(`管理后台: /admin`);
