@@ -51,9 +51,9 @@ app.use('/admin', express.static(path.join(__dirname, 'admin')));
 app.use('/uploads', express.static(uploadsDir));
 
 // 数据库配置 - 本地用默认值，Railway 自动读取环境变量
-const dbConfig = process.env.MYSQL_URL
-    ? { uri: process.env.MYSQL_URL }
-    : {
+const pool = process.env.MYSQL_URL
+    ? mysql.createPool(process.env.MYSQL_URL)
+    : mysql.createPool({
         host: process.env.MYSQLHOST || 'localhost',
         port: parseInt(process.env.MYSQLPORT || '3306', 10),
         user: process.env.MYSQLUSER || 'root',
@@ -62,8 +62,7 @@ const dbConfig = process.env.MYSQL_URL
         waitForConnections: true,
         connectionLimit: 10,
         queueLimit: 0
-    };
-const pool = mysql.createPool(dbConfig);
+    });
 
 // 测试数据库连接
 async function testConnection() {
