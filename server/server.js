@@ -73,7 +73,17 @@ async function testConnection() {
         connection.release();
     } catch (error) {
         console.error('数据库连接失败:', error.message);
-        console.log('请检查数据库配置并确保 MySQL 服务已启动');
+        // 打印诊断信息（脱敏）
+        const diag = process.env.MYSQL_URL
+            ? { mode: 'MYSQL_URL', url: process.env.MYSQL_URL.replace(/:([^@]+)@/, ':***@') }
+            : {
+                mode: '分开变量',
+                host: process.env.MYSQLHOST || '(默认localhost)',
+                port: process.env.MYSQLPORT || '(默认3306)',
+                user: process.env.MYSQLUSER || '(默认root)',
+                database: process.env.MYSQLDATABASE || '(默认conference_db)'
+            };
+        console.log('当前数据库配置:', JSON.stringify(diag));
     }
 }
 
