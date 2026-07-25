@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第二届生物免疫治疗中心建设现场观摩交流会暨重度哮喘专题讨论会</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- 主图 -->
+        <header class="top-banner">
+            <img src="imgs/zhuye.png" alt="第二届生物免疫治疗中心建设现场观摩交流会暨重度哮喘专题讨论会" class="main-banner-img">
+        </header>
+
+        <div class="main-container">
+            <!-- 欢迎辞 -->
+            <section class="section-card welcome-section">
+                <h2 class="section-title">欢迎辞</h2>
+                <div class="welcome-content">
+                    <p>尊敬的 <strong>林江涛</strong> 教授：</p>
+                    <p>您好！</p>
+                    <p>为推动我国重度哮喘诊疗规范化工作的开展，提高慢性气道疾病的管理能力，促进生物免疫治疗技术的临床转化，由北京整合医学学会主办，北京整合医学学会重度哮喘专业委员会、内蒙古包钢医院、通用技术集团呼吸系统疾病临床医学研究中心共同承办，中国哮喘联盟提供学术支持的"第二届生物免疫治疗中心建设现场观摩交流会暨重度哮喘专题讨论会"定于<strong>2026年7月24日至25日</strong>在内蒙古自治区包头市九原大厦酒店召开。</p>
+                    <p>诚邀您在百忙之中加入本次专家团，也邀请您出席同期举行的"居家无创气道炎症检测在慢性气道炎症性疾病临床应用专家共识"的启动和共识框架讨论会。</p>
+                </div>
+            </section>
+
+            <!-- 学术任务 -->
+            <section class="section-card task-section">
+                <div class="task-header">
+                    <h2 class="section-title">学术任务</h2>
+                    <button class="btn btn-primary btn-confirm-all" onclick="confirmAll()">一键任务确认</button>
+                </div>
+
+                <div class="task-list">
+                    <!-- 任务1 -->
+                    <div class="task-card" data-task-id="1">
+                        <div class="task-time">
+                            <span class="time-range">08:00-08:30</span>
+                            <span class="task-date">07月25日(星期六)</span>
+                        </div>
+                        <div class="task-info">
+                            <div class="task-type-row">
+                                <span class="task-type">大会报告</span>
+                                <span class="task-status accepted">接受</span>
+                            </div>
+                            <div class="task-session">开幕式</div>
+                            <button class="btn btn-view-detail" onclick="showSessionDetail(1)">查看 Session 详情</button>
+                            <div class="task-topic">第二届生物免疫治疗中心建设现场观摩交流会开幕式</div>
+                            <div class="task-location">
+                                <span class="location-icon">📍</span>
+                                <span>敕勒川1号厅（3层）</span>
+                            </div>
+                        </div>
+                        <div class="task-action">
+                            <button class="btn btn-confirm-task" onclick="confirmTask(1)">任务确认/修改</button>
+                        </div>
+                    </div>
+
+                    <!-- 任务2 -->
+                    <div class="task-card" data-task-id="2">
+                        <div class="task-time">
+                            <span class="time-range">08:30-08:55</span>
+                            <span class="task-date">07月25日(星期六)</span>
+                        </div>
+                        <div class="task-info">
+                            <div class="task-type-row">
+                                <span class="task-type">专题演讲</span>
+                                <span class="task-status pending">待确认</span>
+                            </div>
+                            <div class="task-session">第三节</div>
+                            <button class="btn btn-view-detail" onclick="showSessionDetail(2)">查看 Session 详情</button>
+                            <div class="task-topic">从支气管热成形术谈对哮喘定义的重新认识</div>
+                            <div class="task-location">
+                                <span class="location-icon">📍</span>
+                                <span>敕勒川1号厅（3层）</span>
+                            </div>
+                        </div>
+                        <div class="task-action">
+                            <button class="btn btn-confirm-task" onclick="confirmTask(2)">任务确认/修改</button>
+                        </div>
+                    </div>
+
+                    <!-- 任务3 -->
+                    <div class="task-card" data-task-id="3">
+                        <div class="task-time">
+                            <span class="time-range">15:30-17:00</span>
+                            <span class="task-date">07月25日(星期六)</span>
+                        </div>
+                        <div class="task-info">
+                            <div class="task-type-row">
+                                <span class="task-type">共识讨论</span>
+                                <span class="task-status pending">待确认</span>
+                            </div>
+                            <div class="task-session">第四节</div>
+                            <button class="btn btn-view-detail" onclick="showSessionDetail(3)">查看 Session 详情</button>
+                            <div class="task-topic">共识启动及框架讨论会</div>
+                            <div class="task-location">
+                                <span class="location-icon">📍</span>
+                                <span>紫薇厅（4层）</span>
+                            </div>
+                        </div>
+                        <div class="task-action">
+                            <button class="btn btn-confirm-task" onclick="confirmTask(3)">任务确认/修改</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 完善个人资料 -->
+            <section class="section-card profile-section">
+                <h2 class="section-title">完善照片及个人简历</h2>
+                <form id="profileForm" name="my-form" action="https://www.formbackend.com/f/ec3298db7ebe8450" method="POST" netlify>
+                    <input type="hidden" name="form-name" value="my-form">
+                    <div class="form-group">
+                        <label class="form-label required">头像照片</label>
+                        <div class="photo-upload">
+                            <div class="photo-preview" id="photoPreview">
+                                <span class="photo-placeholder">点击上传头像照片</span>
+                            </div>
+                            <input type="file" id="photoInput" accept="image/*" hidden>
+                            <button type="button" class="btn btn-upload" onclick="document.getElementById('photoInput').click()">选择文件</button>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group half">
+                            <label class="form-label required">姓名</label>
+                            <input type="text" class="form-input" id="name" name="name" placeholder="请输入姓名">
+                        </div>
+                        <div class="form-group half">
+                            <label class="form-label required">职称</label>
+                            <input type="text" class="form-input" id="title" name="title" placeholder="请输入职称">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group half">
+                            <label class="form-label required">所属医院/单位</label>
+                            <input type="text" class="form-input" id="hospital" name="hospital" placeholder="请输入所属医院或单位">
+                        </div>
+                        <div class="form-group half">
+                            <label class="form-label required">科室</label>
+                            <input type="text" class="form-input" id="department" name="department" placeholder="请输入科室">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group half">
+                            <label class="form-label required">联系电话</label>
+                            <input type="tel" class="form-input" id="phone" name="phone" placeholder="请输入联系电话">
+                        </div>
+                        <div class="form-group half">
+                            <label class="form-label required">电子邮箱</label>
+                            <input type="email" class="form-input" id="email" name="email" placeholder="请输入电子邮箱">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label required">简历</label>
+                        <div class="editor-toolbar">
+                            <button type="button" class="toolbar-btn" onclick="execCmd('bold')" title="加粗"><b>B</b></button>
+                            <button type="button" class="toolbar-btn" onclick="execCmd('italic')" title="斜体"><i>I</i></button>
+                            <span class="toolbar-divider"></span>
+                            <button type="button" class="toolbar-btn" onclick="execCmd('superscript')" title="上标">X<sup>2</sup></button>
+                            <button type="button" class="toolbar-btn" onclick="execCmd('subscript')" title="下标">X<sub>2</sub></button>
+                            <span class="toolbar-divider"></span>
+                            <button type="button" class="toolbar-btn symbol-btn" onclick="toggleSymbolPanel()" title="特殊符号">Ω</button>
+                            <div class="symbol-panel" id="symbolPanel">
+                                <div class="symbol-group">
+                                    <span class="symbol-group-title">希腊字母</span>
+                                    <div class="symbol-grid" id="greekSymbols"></div>
+                                </div>
+                                <div class="symbol-group">
+                                    <span class="symbol-group-title">数学符号</span>
+                                    <div class="symbol-grid" id="mathSymbols"></div>
+                                </div>
+                                <div class="symbol-group">
+                                    <span class="symbol-group-title">单位符号</span>
+                                    <div class="symbol-grid" id="unitSymbols"></div>
+                                </div>
+                                <div class="symbol-group">
+                                    <span class="symbol-group-title">其他符号</span>
+                                    <div class="symbol-grid" id="otherSymbols"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="editor-body" id="resumeEditor" contenteditable="true" placeholder="请输入个人简历"></div>
+                        <input type="hidden" id="resume" name="resume">
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-submit">提交个人简历</button>
+                    </div>
+                </form>
+            </section>
+
+            <!-- 提交简历附件 -->
+            <section class="section-card attachment-section">
+                <h3 class="subsection-title">提交简历附件</h3>
+                <div class="attachment-upload">
+                    <div class="file-input-wrapper">
+                        <input type="file" id="resumeFile" accept=".pdf,.doc,.docx,.ppt,.pptx" hidden>
+                        <button type="button" class="btn btn-choose-file" onclick="document.getElementById('resumeFile').click()">选择文件</button>
+                        <span class="file-name" id="fileName">未选择文件</span>
+                        <button type="button" class="btn btn-view-file" id="btnViewFile" style="display:none;" onclick="viewAttachment()">查看</button>
+                        <button type="button" class="btn btn-delete-file" id="btnDeleteFile" style="display:none;" onclick="deleteAttachment()">删除</button>
+                    </div>
+                    <div class="file-hint">支持格式：PDF、DOC、DOCX、PPT、PPTX，大小不超过10MB</div>
+                    <div class="file-preview-area" id="filePreviewArea" style="display:none;"></div>
+                    <div class="upload-progress" id="uploadProgress" style="display:none;">
+                        <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+                        <span class="progress-text" id="progressText">上传中...</span>
+                    </div>
+                    <div class="form-actions" id="attachmentActions" style="display:none;">
+                        <button type="button" class="btn btn-submit" onclick="submitAttachment()">提交附件</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 参会确认 -->
+            <section class="section-card confirm-section">
+                <h2 class="section-title">参会确认</h2>
+                <div class="confirm-options">
+                    <label class="confirm-radio">
+                        <input type="radio" name="attend" value="1" checked>
+                        <span class="radio-text">确认参加</span>
+                    </label>
+                    <label class="confirm-radio">
+                        <input type="radio" name="attend" value="0">
+                        <span class="radio-text">无法参加</span>
+                    </label>
+                </div>
+                <div class="confirm-extra" id="attendExtra">
+                    <div class="form-group">
+                        <label class="form-label">身份证号（用于酒店入住）</label>
+                        <input type="text" class="form-input" id="idCard" name="id_card" placeholder="请输入身份证号">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">是否需要安排住宿</label>
+                        <div class="radio-group">
+                            <label class="radio-inline"><input type="radio" name="need_hotel" value="1" checked> 需要</label>
+                            <label class="radio-inline"><input type="radio" name="need_hotel" value="0"> 不需要</label>
+                        </div>
+                    </div>
+                    <div class="form-group" id="hotelDateGroup">
+                        <label class="form-label">入住日期</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-inline"><input type="checkbox" name="hotel_dates" value="2026-07-23"> 7月23日</label>
+                            <label class="checkbox-inline"><input type="checkbox" name="hotel_dates" value="2026-07-24" checked> 7月24日</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">抵达信息（航班/车次号、抵达时间）</label>
+                        <input type="text" class="form-input" id="arrivalInfo" name="arrival_info" placeholder="例如：CA1234，7月24日10:00抵达包头机场">
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn btn-submit" onclick="submitRegistration()">提交报名</button>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Session 详情弹窗 -->
+    <div class="modal" id="sessionModal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeSessionModal()">&times;</span>
+            <h3 class="modal-title" id="sessionModalTitle">Session 详情</h3>
+            <div class="modal-body" id="sessionModalBody"></div>
+        </div>
+    </div>
+
+    <!-- 任务确认弹窗 -->
+    <div class="modal" id="taskConfirmModal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeTaskConfirmModal()">&times;</span>
+            <h3 class="modal-title">任务确认</h3>
+            <div class="modal-body">
+                <p>请确认您是否接受该学术任务？</p>
+                <div class="confirm-options-modal">
+                    <label class="confirm-radio"><input type="radio" name="taskConfirm" value="1" checked><span class="radio-text">接受</span></label>
+                    <label class="confirm-radio"><input type="radio" name="taskConfirm" value="0"><span class="radio-text">谢绝</span></label>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn btn-submit" onclick="submitTaskConfirm()">确认</button>
+                    <button type="button" class="btn btn-cancel" onclick="closeTaskConfirmModal()">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 成功提示弹窗 -->
+    <div class="modal" id="successModal">
+        <div class="modal-content success-content">
+            <div class="success-icon">✓</div>
+            <h3 class="success-title">提交成功</h3>
+            <p id="successMessage">您的信息已提交成功！</p>
+            <button type="button" class="btn btn-submit" onclick="closeSuccessModal()">确定</button>
+        </div>
+    </div>
+
+    <!-- 文件预览弹窗 -->
+    <div class="modal" id="fileViewModal">
+        <div class="modal-content file-view-content">
+            <span class="close-btn" onclick="closeFileViewModal()">&times;</span>
+            <h3 class="modal-title" id="fileViewTitle">文件预览</h3>
+            <div class="modal-body" id="fileViewBody"></div>
+        </div>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
